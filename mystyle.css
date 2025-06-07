@@ -41,13 +41,6 @@ img {
     margin-right: auto;
 }
 
-/* header */
-.header-flex {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
 .primary-header {
   background-image: url(img/header.jpg);
   background-position: top center;
@@ -65,12 +58,6 @@ img {
   align-items: center;
 }
 
-.secondary-header {
-    background-color: black;
-    height: 100px;
-    color: white;
-}
-
 .menu a{
     color: white;
     text-decoration: none;
@@ -80,14 +67,4 @@ img {
 .main-flex {
     display: flex;
     flex-direction: row;
-}
-
-.about-flex {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-}
-
-.about-flex h2 {
-    text-align: center;
 }
