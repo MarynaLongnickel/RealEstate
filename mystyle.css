@@ -1,5 +1,5 @@
 
-/* global */
+/* Global */
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +27,7 @@ img {
     margin: 20px 0px;
 }
 
-/* utilities */
+/* Utilities */
 .btn-details {
     margin-top: auto;
     background-color: orange;
@@ -66,25 +66,44 @@ img {
   padding-top: 20px;
 }
 
-.menu a{
+.menu a {
     color: white;
     text-decoration: none;
     margin-right: 10px;
 }
 
-.about-container {
+.main-container {
     display: flex;
     flex-direction: row;
     padding-bottom: 20px;
     align-items: flex-start;
 }
 
+.container h2 {
+    margin-top: 10px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+    gap: 40px; /* Add space between image and text */
+    min-height: 300px; /* Adjust as needed for alignment */
+}
+
+.about-container > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* evenly distribute h3+p blocks */
+    padding: 10px 0; /* optional spacing */
+}
+
+
 .text-price {
     color: rgb(42, 175, 42);
     font-weight: bold;
 }
-
-/* houses */
+/* Houses */
 .houses-container {
     display: flex;
     gap: 10px;
@@ -114,26 +133,13 @@ img {
     margin-top: 15px;
 }
 
-/* .houses-item p {
-    margin: 10px 0;
-} */
-
-/* .houses-item ul {
+.blog-item {
+    background-color: black;
     display: flex;
-    justify-content: space-between;
-    list-style: none;
-    padding-left: 20px;
-    padding-right: 50px;
-    padding-bottom: 10px;
-    margin-top: 10px;
+    flex-direction: column;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    gap: 10px;
 }
-
-.houses-item li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 40%;
-} */
 
 .features-row {
   display: flex;
@@ -148,6 +154,19 @@ img {
 
 /* Tablet View */
 @media((min-width: 601px) and (max-width: 768px)) {
+    .main-container {
+        flex-direction:  column;
+        justify-content: center;
+    }
+    .main-container div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-container img {
+        width: 20%;
+        margin-bottom: 20px;
+    }
     .about-container {
         flex-direction:  column;
         justify-content: center;
@@ -161,11 +180,23 @@ img {
         width: 20%;
         margin-bottom: 20px;
     }
+    
 }
 
 
 /* Phone View */
 @media((max-width: 600px)) {
+    .main-container {
+        flex-direction:  column;
+    }
+    .main-container div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-container img {
+        width: 40%;
+    }
     .about-container {
         flex-direction:  column;
     }
